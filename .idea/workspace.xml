@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c6782f04-8a21-4193-a1d3-6658bc0db913" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/models/user.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/models/user.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/validations/auth.validation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/validations/auth.validation.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +31,9 @@
   &quot;fromUser&quot;: false
 }</component>
   <component name="ProjectId" id="3DRghPoqHMhNQ4uVxTTLV1Bn2Wd" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -79,7 +85,8 @@
       <workItem from="1778302573863" duration="167000" />
       <workItem from="1778302749994" duration="1263000" />
       <workItem from="1778304024008" duration="11638000" />
-      <workItem from="1778391067688" duration="611000" />
+      <workItem from="1778391067688" duration="2469000" />
+      <workItem from="1778476714544" duration="11522000" />
     </task>
     <servers />
   </component>
