@@ -6,6 +6,7 @@ model User {
   password String
 
   posts Post[]
+  news  News[]
 
   createdAt DateTime @default(now())
 
