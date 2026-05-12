@@ -6,8 +6,8 @@ import {createPostSchema, updatePostSchema} from "../../../validations/post.vali
 
 const router = Router();
 
-router.get('/', getPosts);
-router.get('/:id', getSinglePost);
+router.get('/', authMiddleware, getPosts);
+router.get('/:id', authMiddleware, getSinglePost);
 router.post('/', authMiddleware, validate(createPostSchema), createPost);
 router.put('/:id', authMiddleware, validate(updatePostSchema), updatePost);
 router.delete('/:id', authMiddleware, deletePost);
