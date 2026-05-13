@@ -48,7 +48,7 @@ export const createPostService = async (data, user) => {
         },
     });
 
-    return post;
+return post;
 }
 
 export const updatePostService = async (id, data, user) => {
