@@ -1,50 +1,36 @@
 import bcrypt from 'bcrypt';
-import jwt from 'jsonwebtoken';
 import {AppError} from "../../../utils/error.js";
-import prisma from "../../../config/db.js";
+import {findByUserEmail, createUser} from "./auth.repository.js";
+import {userResponse} from "./utils/auth.serializer.js";
+import {generateToken} from "../../../utils/generateToken.js";
+import {successResponse} from "../../../utils/successResponse.js";
 
 export const registerService = async (data) => {
-    const {
-        name, email, password,
-    } = data;
+    const {name, email, password} = data;
 
-    const existingUser = await prisma.user.findFirst({
-        where: {
-            OR: [{email},],
-        },
-    });
+    const existingUser = await findByUserEmail(email);
 
     if (existingUser) {
-        throw new AppError('User already exists', 209);
+        throw new AppError('User already exists', 409);
     }
 
-    const hashedPassword = await bcrypt.hash(password, 8);
+    const hashedPassword = await bcrypt.hash(password, 10);
 
-    const user = await prisma.user.create({
-        data: {
-            name, email, password: hashedPassword,
-        },
+    const user = await createUser({
+        name, email, password: hashedPassword,
     });
 
-    const token = jwt.sign({
-        id: user.id, email: user.email,
-    }, process.env.JWT_SECRET, {
-        expiresIn: '1d'
-    });
+    const token = generateToken(user);
 
     return {
-        token, user
+        token, user: userResponse(user),
     };
 }
 
 export const loginService = async (data) => {
     const {email, password} = data;
 
-    const user = await prisma.user.findFirst({
-        where: {
-            email
-        }
-    });
+    const user = await findByUserEmail(email);
 
     if (!user) {
         throw new AppError('User does not exist', 404);
@@ -53,16 +39,16 @@ export const loginService = async (data) => {
     const isMatch = await bcrypt.compare(password, user.password);
 
     if (!isMatch) {
-        throw new AppError('Invalid password', 401);
+        throw new AppError('Invalid credentials', 401);
     }
 
-    const token = jwt.sign({
-        id: user.id, email: user.email,
-    }, process.env.JWT_SECRET, {
-        expiresIn: '1d'
-    });
+    const token = generateToken(user);
 
     return {
-        message: 'User logged in', token, user
+        token, user: userResponse(user),
     }
 }
+
+export const getMeService = async (user) => {
+    return userResponse(user);
+};

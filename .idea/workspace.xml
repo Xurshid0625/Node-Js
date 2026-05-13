@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c6782f04-8a21-4193-a1d3-6658bc0db913" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/user/news/news.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/user/news/news.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/user/news/news.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/user/news/news.routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/user/news/news.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/user/news/news.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/user/post/post.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/user/post/post.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/user/auth/auth.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/user/auth/auth.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/user/auth/auth.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/user/auth/auth.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middlewares/auth.middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middlewares/auth.middleware.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +58,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/utils" />
       <recent name="$PROJECT_DIR$/src/api/user" />
       <recent name="$PROJECT_DIR$/src/api" />
       <recent name="$PROJECT_DIR$/src" />
@@ -95,7 +95,7 @@
       <workItem from="1778568122991" duration="8000" />
       <workItem from="1778568173487" duration="1435000" />
       <workItem from="1778587683714" duration="3321000" />
-      <workItem from="1778647325938" duration="1039000" />
+      <workItem from="1778647325938" duration="6320000" />
     </task>
     <servers />
   </component>
@@ -113,6 +113,12 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/api/user/auth/auth.route.js</url>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/utils/generateToken.js</url>
+          <line>3</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
