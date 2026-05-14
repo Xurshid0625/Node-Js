@@ -4,11 +4,17 @@ model User {
   name     String
   email    String @unique
   password String
-
-  posts Post[]
-  news  News[]
+  role     Role   @default(USER)
+  posts    Post[]
+  news     News[]
 
   createdAt DateTime @default(now())
 
   @@map("users")
+}
+
+enum Role {
+  USER
+  ADMIN
+  MODERATOR
 }

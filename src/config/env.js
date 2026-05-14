@@ -1,7 +1,15 @@
 import dotenv from 'dotenv';
+import {z} from 'zod';
 
-dotenv.config();
+const envSchema = z.object({
+    PORT: z.coerce.number(), DATABASE_URL: z.string(), JWT_SECRET: z.string(), HASH_SALT: z.coerce.number(),
+});
 
-export const env = {
-    PORT: process.env.PORT, JWT_SECRET: process.env.JWT_SECRET, DATABASE_URL: process.env.DATABASE_URL,
-};
+const parsed = envSchema.safeParse(process.env);
+
+if (!parsed) {
+    console.error(parsed.error.format());
+    process.exit(1);
+}
+
+export const env = parsed.data;

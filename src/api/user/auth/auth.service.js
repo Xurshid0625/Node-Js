@@ -3,10 +3,9 @@ import {AppError} from "../../../utils/error.js";
 import {findByUserEmail, createUser} from "./auth.repository.js";
 import {userResponse} from "./utils/auth.serializer.js";
 import {generateToken} from "../../../utils/generateToken.js";
-import {successResponse} from "../../../utils/successResponse.js";
 
 export const registerService = async (data) => {
-    const {name, email, password} = data;
+    const {name, email, password, role} = data;
 
     const existingUser = await findByUserEmail(email);
 
@@ -17,7 +16,7 @@ export const registerService = async (data) => {
     const hashedPassword = await bcrypt.hash(password, 10);
 
     const user = await createUser({
-        name, email, password: hashedPassword,
+        name, email, password: hashedPassword, role
     });
 
     const token = generateToken(user);

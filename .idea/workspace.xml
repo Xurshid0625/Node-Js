@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6782f04-8a21-4193-a1d3-6658bc0db913" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/user/auth/auth.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/user/auth/auth.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/models/user.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/models/user.prisma" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/user/auth/auth.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/user/auth/auth.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/user/auth/utils/auth.serializer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/user/auth/utils/auth.serializer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/user/news/news.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/user/news/news.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/user/post/post.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/user/post/post.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/env.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/env.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/middlewares/auth.middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middlewares/auth.middleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/generateToken.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/generateToken.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,24 +45,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/xurshid/nodejs&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/snap/phpstorm/627/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/xurshid/nodejs",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.completion.inline",
+    "ts.external.directory.path": "/snap/phpstorm/627/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/utils" />
@@ -95,7 +102,9 @@
       <workItem from="1778568122991" duration="8000" />
       <workItem from="1778568173487" duration="1435000" />
       <workItem from="1778587683714" duration="3321000" />
-      <workItem from="1778647325938" duration="6320000" />
+      <workItem from="1778647325938" duration="7667000" />
+      <workItem from="1778673991876" duration="2112000" />
+      <workItem from="1778733729625" duration="6081000" />
     </task>
     <servers />
   </component>
@@ -117,7 +126,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/utils/generateToken.js</url>
           <line>3</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
